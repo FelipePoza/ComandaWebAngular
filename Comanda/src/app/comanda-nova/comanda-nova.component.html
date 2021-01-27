@@ -1,0 +1,11 @@
+<div>
+  <h3>Adicionar Nova Comanda</h3>
+</div>
+<form class="example-container" [formGroup]="comandaForm" (ngSubmit)="adicionarComanda(comandaForm.value)">
+  <mat-form-field>
+    <input matInput name="codigo" placeholder="Código da Comanda" formControlName="codigo">
+  </mat-form-field>
+  <br>
+  <br>
+  <button type="submit" [disabled]="!comandaForm.valid" mat-button color="primary" >Adicionar</button>
+</form>

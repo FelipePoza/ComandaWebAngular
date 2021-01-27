@@ -1,0 +1,10 @@
+<div>
+  <h3>Editar Comanda</h3>
+</div>
+<form class="example-container" [formGroup]="comandaForm" (ngSubmit)="atualizarComanda(comandaForm.value)">
+  <mat-form-field>
+    <input matInput name="Codigo" placeholder="Código da Categoria" formControlName="codigo">
+  </mat-form-field>
+  <br>
+  <button type="submit" [disabled]="!comandaForm.valid" mat-button color="primary" >Editar</button>
+</form>
